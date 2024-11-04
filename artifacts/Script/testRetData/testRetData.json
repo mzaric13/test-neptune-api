@@ -1,0 +1,20 @@
+{
+	"id": "4c60ce23-d177-474e-9895-d748a3c9656a",
+	"createdAt": "2024-11-04T12:12:49.000Z",
+	"createdBy": "admin",
+	"globalScripts": [],
+	"externalModules": [],
+	"entitySets": [],
+	"apis": [],
+	"name": "testRetData",
+	"ver": "24.11.4.1313",
+	"description": null,
+	"content": "file:///content.js",
+	"useAsGlobalScript": false,
+	"transpiledContent": null,
+	"lastRunSuccessful": false,
+	"isTypescript": false,
+	"language": "javascript",
+	"jsscriptGroup": "04bc4d1c-7aa3-4932-84e5-bee9a9a9b6be",
+	"package": "c150a9b1-9a98-4bc8-9693-cc244b2f4591"
+}

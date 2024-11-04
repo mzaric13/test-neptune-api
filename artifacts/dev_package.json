@@ -1,0 +1,61 @@
+{
+	"id": "c150a9b1-9a98-4bc8-9693-cc244b2f4591",
+	"createdAt": "2024-11-04T12:10:55.000Z",
+	"createdBy": "admin",
+	"git": {
+		"remote": "https://github.com/mzaric13/test-neptune-api.git"
+	},
+	"name": "test_apis_second_instance",
+	"description": null,
+	"ver": "24.11.4.1319",
+	"enableCICD": true,
+	"apps": [],
+	"api": [
+		{
+			"id": "0bf65781-6b26-4763-bbf7-8f6124fe6819",
+			"name": "test_internal_api_cicd",
+			"description": null,
+			"apiGroup": null
+		}
+	],
+	"odataSource": [],
+	"odataMock": [],
+	"dictionary": [],
+	"jsclass": [
+		{
+			"id": "4c60ce23-d177-474e-9895-d748a3c9656a",
+			"name": "testRetData",
+			"description": null
+		}
+	],
+	"jsscript_group": [
+		{
+			"id": "04bc4d1c-7aa3-4932-84e5-bee9a9a9b6be",
+			"name": "test_scripts_cicd",
+			"description": null
+		}
+	],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [],
+	"category": [],
+	"launchpad": [],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"department": [],
+	"script_scheduler": [],
+	"wf_definition": [],
+	"connector": [],
+	"events": [],
+	"media_library": [],
+	"code_snippets": [],
+	"wf_determination": [],
+	"wf_taskaction": []
+}

@@ -1,0 +1,46 @@
+name: Example deploy workflow
+
+on:
+  push:
+
+jobs:
+
+  build:
+    # needs: install-npm
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies with NPM
+        run: npm install
+      
+      - name: "Run to staging"
+        run: npm run deploy
+        env:
+          DXP_OE_SERVER_URL: ${{ secrets.CDCI_STAGING_URL }}
+          DXP_OE_SERVER_TOKEN: ${{ secrets.CDCI_STAGING_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.WORKFLOW_GITHUB_TOKEN }}
+
+    # Comment out to run the deploy script when you push to the repository.
+    #- run: npm run deploy
+    #  env:
+    #    DXP_OE_SERVER_URL: ${{ secrets.CDCI_STAGING_URL }}
+    #    DXP_OE_SERVER_TOKEN: ${{ secrets.CDCI_STAGING_TOKEN }}
+    #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    # Comment out to run test script after deployment.
+    #- run: npm run test
+    #  env:
+    #    DXP_OE_SERVER_URL: ${{ secrets.CDCI_STAGING_URL }}
+    #    DXP_OE_SERVER_TOKEN: ${{ secrets.CDCI_STAGING_TOKEN }}
